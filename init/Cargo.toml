@@ -1,0 +1,18 @@
+[package]
+name = "aries-init"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Minimal initramfs /init for the Xiaomi Mi 2 (aries) on mainline Linux"
+
+[[bin]]
+name = "init"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+overflow-checks = false

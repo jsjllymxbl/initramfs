@@ -1,0 +1,5 @@
+# Cross linking without a cross gcc: rust-lld ships inside the rustup
+# toolchain and understands ARM ELF.  The musl libc and the crt objects come
+# from the target's `self-contained` directory, so nothing else is needed.
+[target.armv7-unknown-linux-musleabihf]
+linker = "rust-lld"

@@ -1,0 +1,5 @@
+# Everything is rustfmt's default except the two width heuristics below: the
+# syscall wrappers take five short arguments and the firmware tables read better
+# as tables, so let those stay on one line as long as they fit in 100 columns.
+fn_call_width = 100
+array_width = 100

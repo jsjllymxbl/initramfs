@@ -1,0 +1,8 @@
+# build products
+/root/
+/boot.img
+/boot.img.tmp
+/initramfs.cpio.*
+/zImage-dtb
+/init/target/
+/scripts/__pycache__
