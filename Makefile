@@ -61,10 +61,10 @@ BOARD          ?= aries
 
 # fw_devlink=permissive and the three *_ignore_unused flags are mandatory on
 # APQ8064; log_buf_len=2M is what makes the failure log (which init dumps to
-# userdata) worth reading.  drm.debug=0x1f is a bring-up leftover.
-CMDLINE ?= console=ttyMSM0,115200n8 console=tty0 earlycon log_buf_len=2M consoleblank=0 \
-           drm.debug=0x1f clk_ignore_unused pd_ignore_unused regulator_ignore_unused \
-           fw_devlink=permissive no_console_suspend printk.always_kmsg_dump=1 \
+# userdata) worth reading.
+CMDLINE ?= console=ttyMSM0,115200n8 console=tty0 log_buf_len=2M \
+           clk_ignore_unused pd_ignore_unused regulator_ignore_unused \
+           fw_devlink=permissive \
            lk2nd.pass-ramoops=keep
 
 # ----------------------------------------------------------------- paths ----
